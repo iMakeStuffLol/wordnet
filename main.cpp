@@ -29,7 +29,7 @@ int main(int argc, char** argv){
     args["DEFAULT"] = argv[i];
   }
 
-  //Validate that required exist
+  //Validate and set default parameters
   if(args.find("-l") == args.end()) args["-l"] = "3";
   if(args.find("-u") == args.end()) args["-u"] = args["-l"];
   if(args.find("-d") == args.end()) args["-d"] = "1";
@@ -38,10 +38,12 @@ int main(int argc, char** argv){
     return 0;
   }
 
+  //Try to generate, catch errors.
   try{
     vector<string> words = readfile(args["DEFAULT"], stoi(args["-l"]), stoi(args["-u"]));
     cout<<"Received list of "<<words.size()<< " words. Processing...\n";
     makeGraph(words, args["-o"], stoi(args["-d"]));
+    cout<<"Graph complete!\n";
   }
   catch(string exc){
     cout<<exc<<'\n';

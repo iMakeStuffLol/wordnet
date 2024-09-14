@@ -6,7 +6,6 @@
 using namespace std;
 
 //Function to find difference between strings of various sizes
-//Return 0 if
 int diff(string s1, string s2){
   int d = 0;
   int ssize = s1.size() < s2.size() ? s1.size() : s2.size();
@@ -33,7 +32,7 @@ void makeGraph(vector<string> words, string outname, int difference){
   cout<<"Writing connections\n";
   outfile<<"<edges>";
   for(int i = 0; i<words.size(); i++){
-    if(i%100 == 0) cout<<i<<'\n';
+    //if(i%100 == 0) cout<<i<<'\n';
     for(int x = i+1; x<words.size(); x++){
       int d = diff(words[i], words[x]);
       //Connection is only valid if it isn't 0
