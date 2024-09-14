@@ -5,12 +5,12 @@ First, compile the program using g++
 g++ main.c -o youroutputfile
 
 Then run the program
-./youroutputfile input.txt -o output.gexf -l
+./youroutputfile input.txt -o output.gexf -l 3
 
 You can use Gephi to view the file
 ## parameters
 -o outputfile - required
--l lowerbound - optional, 3 by default
+-l lowerbound - optional, 3 by default, functions as length if -u is not set
 -u upperbound - optional, is the value of -l by default
 -d difference - optional, is 1 by default
 EXAMPLE: ./youroutputfile input.txt -o output.gexf -l 2 -u 5 -d 2
