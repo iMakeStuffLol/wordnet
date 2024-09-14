@@ -1,7 +1,7 @@
 # wordnet
 A simple C++ program to generate word networks
 ## usage
-First, compile the program using g++
+First, compile the program using g++ (or your prefered C++ compiler)
 
 g++ main.c -o youroutputfile
 
@@ -25,4 +25,4 @@ This example would get words from a length of 2 to 5 and join them if they diffe
 
 ## limitations
 1. The difference is calculated from start to end. This means the difference between "an" and "tan" would be 3 but the difference between "an" and "and" would be 1
-2. The program is not efficient once the words start getting too long.
+2. The program is not efficient once the list starts getting too long.
